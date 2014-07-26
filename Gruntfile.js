@@ -58,6 +58,19 @@ module.exports = function(grunt) {
       }
     },
 
+    // Start a server
+    // ----------------------
+
+    connect: {
+      server: {
+        options: {
+          open: true,
+          port: 9001,
+          base: 'dist/email'
+        }
+      }
+    },
+
     // Watch task
     // ----------------------
 
@@ -82,5 +95,6 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['jade']);
+  grunt.registerTask('build',   ['jade', 'less', 'emailBuilder', 'connect', 'watch']);
 
 };
