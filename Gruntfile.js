@@ -66,6 +66,7 @@ module.exports = function(grunt) {
         options: {
           open: true,
           port: 9001,
+          livereload: true,
           base: 'dist/email'
         }
       }
@@ -75,6 +76,9 @@ module.exports = function(grunt) {
     // ----------------------
 
     watch: {
+      options: {
+        livereload: true
+      },
       jade: {
         files: 'src/jade/**/*.jade',
         tasks: ['jade', 'emailBuilder']
