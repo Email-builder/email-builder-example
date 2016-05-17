@@ -1,0 +1,12 @@
+sudo: false
+language: node_js
+node_js:
+- '0.12'
+- '4'
+- '5'
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+matrix:
+  fast_finish: true
