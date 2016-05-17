@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 /***********
 Originally based on The MailChimp Reset from Fabio Carneiro, MailChimp User Experience Design
 More info and templates on Github: https://github.com/mailchimp/Email-Blueprints
@@ -13,25 +15,40 @@ INLINE: Yes.
 }
 
 /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
-body{
-  width:100% !important;
-  -webkit-text-size-adjust:100%;
-  -ms-text-size-adjust:100%;
-  margin:0;
-  padding:0;
+body {
+  width: 100% !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
 
   background: #eee;
+
+  font-family: $font-family-sans-serif;
 }
-.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
-.ExternalClass,
-.ExternalClass p,
-.ExternalClass span,
-.ExternalClass font,
-.ExternalClass td,
-.ExternalClass div {
-  line-height: 100%;
-} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
-#backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+.ExternalClass {
+  width:100%;
+
+  &,
+  p,
+  span,
+  font,
+  td,
+  div {
+    line-height: 100%;
+  }
+}
+
+/* Force Hotmail to display emails at full width */
+
+
+/* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+#backgroundTable {
+  margin:0;
+  padding:0;
+  width:100% !important;
+  line-height: 100% !important;
+}
 /* End reset */
 
 /* Some sensible defaults for imagess
@@ -41,9 +58,14 @@ body{
 
 Bring inline: Yes.
 */
-img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;
+img {
+  outline:none;
+  text-decoration:none;
+  -ms-interpolation-mode: bicubic;
 
-  a & {border:none;}
+  a & {
+    border:none;
+  }
 }
 .image_fix {display:block;}
 
@@ -51,7 +73,9 @@ img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;
 
 Bring inline: Yes.
 **/
-p {margin: 1em 0;}
+p {
+  margin: 1em 0;
+}
 
 /** Hotmail header color reset: Hotmail replaces your header color styles with a green color on H2, H3, H4, H5, and H6 tags. In this example, the color is reset to black for a non-linked header, blue for a linked header, red for an active header (limited support), and purple for a visited header (limited support).  Replace with your choice of color. The !important is really what is overriding Hotmail's styling. Hotmail also sets the H1 and H2 tags to the same size.
 
@@ -97,11 +121,22 @@ a {color: orange; text-decoration: none;}
   a:hover { color: green; }
 */
 
-
 .container {
   width: 640px;
   margin: 0 auto;
 
   width: 640px;
   margin: 0 auto;
+}
+
+
+.header {
+  background: #fff;
+  height: 75px;
+
+  margin-bottom: 30px;
+}
+
+.main {
+
 }

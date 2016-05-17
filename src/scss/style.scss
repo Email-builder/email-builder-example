@@ -7,7 +7,9 @@ H/T @edmelly
 
 Bring inline: No.
 **/
-table td {border-collapse: collapse;}
+table td {
+  border-collapse: collapse;
+}
 
 
 
@@ -34,19 +36,21 @@ Read more: http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-y
 
   Step 1 (Step 2: line 224)
   */
-  a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: black; /* or whatever your want */
-        pointer-events: none;
-        cursor: default;
-      }
+  a[href^="tel"],
+  a[href^="sms"] {
+    text-decoration: none;
+    color: black; /* or whatever your want */
+    pointer-events: none;
+    cursor: default;
+  }
 
-  .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-        text-decoration: default;
-        color: orange !important; /* or whatever your want */
-        pointer-events: auto;
-        cursor: default;
-      }
+  .mobile_link a[href^="tel"],
+  .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important; /* or whatever your want */
+    pointer-events: auto;
+    cursor: default;
+  }
 }
 
 /* More Specific Targeting */
@@ -55,19 +59,21 @@ Read more: http://www.campaignmonitor.com/blog/post/3457/media-query-issues-in-y
   /* You guessed it, ipad (tablets, smaller screens, etc) */
 
   /* Step 1a: Repeating for the iPad */
-  a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: blue; /* or whatever your want */
-        pointer-events: none;
-        cursor: default;
-      }
+  a[href^="tel"],
+  a[href^="sms"] {
+    text-decoration: none;
+    color: blue; /* or whatever your want */
+    pointer-events: none;
+    cursor: default;
+  }
 
-  .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-        text-decoration: default;
-        color: orange !important;
-        pointer-events: auto;
-        cursor: default;
-      }
+  .mobile_link a[href^="tel"],
+  .mobile_link a[href^="sms"] {
+    text-decoration: default;
+    color: orange !important;
+    pointer-events: auto;
+    cursor: default;
+  }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
