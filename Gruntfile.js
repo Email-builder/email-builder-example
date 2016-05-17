@@ -4,6 +4,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    clean: ['dist'],
+
     // Compile Pug
     // ----------------------
 
@@ -98,7 +100,9 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['pug']);
-  grunt.registerTask('build',   ['pug', 'sass', 'emailBuilder', 'connect', 'watch']);
+  grunt.registerTask('default', ['build']);
+  grunt.registerTask('build', ['clean', 'pug', 'sass', 'emailBuilder', 'connect', 'watch']);
 
+  // Test build
+  grunt.registerTask('test', ['clean', 'pug', 'sass', 'emailBuilder']);
 };

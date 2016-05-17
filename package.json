@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "grunt build",
-    "test": "test"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/yargalot/email-builder-example",
   "devDependencies": {
-    "grunt": "~1.0.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-connect": "~1.0.2",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-watch": "~1.0.0",
