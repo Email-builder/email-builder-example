@@ -6,11 +6,31 @@ http://www.mailchimp.com &amp; http://www.fabio-carneiro.com
 INLINE: Yes.
 ***********/
 /* Client-specific Styles */
-#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
-body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+
+/* Force Outlook to provide a "view in browser" menu link. */
+#outlook a {
+  padding:0;
+}
+
 /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+body{
+  width:100% !important;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  margin:0;
+  padding:0;
+
+  background: #eee;
+}
 .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
-.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%;
+} /* Force Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
 #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
 /* End reset */
 
@@ -59,15 +79,29 @@ More info : http://www.campaignmonitor.com/blog/post/3694/removing-spacing-from-
 
 Bring inline: Yes
 **/
-table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+table {
+  border-collapse:collapse;
+  mso-table-lspace:0pt;
+  mso-table-rspace:0pt;
+}
 
-/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
 
-Bring inline: Yes. */
+/* Styling your links has become much simpler with the new Yahoo.
+  In fact, it falls in line with the main credo of styling in email, bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+  Bring inline: Yes. */
 a {color: orange; text-decoration: none;}
 
 /* Or to go the gold star route...
-a:link { color: orange; }
-a:visited { color: blue; }
-a:hover { color: green; }
+  a:link { color: orange; }
+  a:visited { color: blue; }
+  a:hover { color: green; }
 */
+
+
+.container {
+  width: 640px;
+  margin: 0 auto;
+
+  width: 640px;
+  margin: 0 auto;
+}

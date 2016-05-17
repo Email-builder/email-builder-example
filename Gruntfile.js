@@ -4,10 +4,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
-    // Compile Jade
+    // Compile Pug
     // ----------------------
 
-    jade: {
+    pug: {
       email: {
         options: {
           pretty: true,
@@ -17,26 +17,26 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,           // Enable dynamic expansion.
-          cwd: 'src/jade',        // Src matches are relative to this path.
-          src: ['*.jade'],        // Actual pattern(s) to match.
+          cwd: 'src/pug',        // Src matches are relative to this path.
+          src: ['*.pug'],        // Actual pattern(s) to match.
           dest: 'dist/html/',     // Destination path prefix.
           ext: '.html',           // Dest filepaths will have this extension.
         }]
       }
     },
 
-    // Compile Less
+    // Compile Sass
     // ----------------------
 
-    less: {
-      development: {
-        options: {
-          paths: ["assets/css"]
-        },
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
         files: [{
           expand: true,           // Enable dynamic expansion.
-          cwd: 'src/less',        // Src matches are relative to this path.
-          src: ['*.less'],        // Actual pattern(s) to match.
+          cwd: 'src/scss',        // Src matches are relative to this path.
+          src: ['*.scss'],        // Actual pattern(s) to match.
           dest: 'dist/css/',     // Destination path prefix.
           ext: '.css',           // Dest filepaths will have this extension.
         }]
@@ -79,13 +79,13 @@ module.exports = function(grunt) {
       options: {
         livereload: true
       },
-      jade: {
-        files: 'src/jade/**/*.jade',
-        tasks: ['jade', 'emailBuilder']
+      pug: {
+        files: 'src/pug/**/*.pug',
+        tasks: ['pug', 'emailBuilder']
       },
-      less: {
-        files: 'src/less/**/*.less',
-        tasks: ['less', 'emailBuilder']
+      sass: {
+        files: 'src/scss/**/*.scss',
+        tasks: ['sass', 'emailBuilder']
       },
       grunt: {
         files: ['Gruntfile.js']
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['jade']);
-  grunt.registerTask('build',   ['jade', 'less', 'emailBuilder', 'connect', 'watch']);
+  grunt.registerTask('default', ['pug']);
+  grunt.registerTask('build',   ['pug', 'sass', 'emailBuilder', 'connect', 'watch']);
 
 };
